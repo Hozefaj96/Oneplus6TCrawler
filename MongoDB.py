@@ -87,6 +87,10 @@ sentiments = bucketpercentages(bucketList)
 reviewSentimentAnalysis = scrapedAmazonData.sentimentAnalysis
 
 sentimentAnalysis = {
-    "Sentiment Analysis": sentiments
+    "Battery Life": sentiments[0],
+    "Picture Quality": sentiments[1],
+    "Sound Quality": sentiments[2],
+    "Finger Print": sentiments[3],
+    "Value for money": sentiments[4]
 }
 reviewSentimentsInsert = reviewSentimentAnalysis.insert_one(sentimentAnalysis)
